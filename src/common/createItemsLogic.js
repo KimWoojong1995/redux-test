@@ -10,7 +10,7 @@ export default function createItemsLogic(name) {
     const edit = item => ({ type: EDIT, item });
 
     const reducer = createReducer(
-        { [name]: [] },
+        { [name]: [] }, //initialState 역할
         {
             [ADD]: (state, action) => state[name].push(action.item),
             [REMOVE]: (state, action) => {
